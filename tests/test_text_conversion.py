@@ -35,7 +35,7 @@ def test_text_conversion_txt_to_docx():
 def test_text_conversion_docx_to_txt():
     runner = CliRunner()
     input_path = 'exampleinputfolder/test_text.docx'
-    output_path = 'exampleoutputfolder/test_text.txt'
+    output_path = 'exampleoutputfolder/test_text1.txt'
     result = runner.invoke(convert_text_command, [input_path, output_path, 'txt'])
     print(result.output)
     assert result.exit_code == 0
