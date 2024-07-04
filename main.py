@@ -7,7 +7,7 @@ from conversions.text_converter import text_conversion
 @click.option('--type', '-t', type=click.Choice(['audio', 'image', 'text']), help='Type of conversion: audio, image, or text.')
 @click.argument('input_path', type=click.Path(exists=True))
 @click.argument('output_path', type=click.Path())
-@click.argument('output_format', type=click.Choice(['wav', 'mp3', 'ogg', 'flv', 'png', 'jpeg', 'docx', 'md', 'html', 'pdf', 'txt', 'rtf'], case_sensitive=False))
+@click.argument('output_format', type=click.Choice(['wav', 'mp3', 'ogg', 'flv', 'png', 'jpeg', 'docx', 'pdf', 'txt', 'rtf'], case_sensitive=False))
 def convert(type, input_path, output_path, output_format):
     """
     Convert files between different formats.
